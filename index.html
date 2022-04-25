@@ -7,6 +7,72 @@
     <title>Vite App</title>
   </head>
   <body>
+    <nav class="navbar">
+      <img src="./images/logo.svg" alt="logo" class="navbar__logo" />
+      <section class="navbar__links">
+        <label class="navbar__menu-button">
+          <img src="./images/icon-menu.svg" alt="menu" />
+          <input type="checkbox" id="menu-button" />
+        </label>
+        <div class="overlay">
+          <ul class="navbar__item-list">
+            <li class="navbar__item navbar__item--right">
+              <button class="navbar__close-menu">
+                <img src="./images/icon-close-menu.svg" alt="close menu" />
+              </button>
+            </li>
+            <li class="navbar__item">
+              <span class="navbar__item-with-button">
+                Features
+                <button class="navbar__open-sub-menu">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    data-up=""
+                    alt=""
+                    class="navbar__open-sub-menu-img"
+                  />
+                </button>
+              </span>
+              <ul class="navbar__sub-item-list navbar__sub-item-list--hide">
+                <li class="navbar__sub-item">
+                  <img src="./images/icon-todo.svg" alt="" />Todo List
+                </li>
+                <li class="navbar__sub-item">
+                  <img src="./images/icon-calendar.svg" alt="" />Calendar
+                </li>
+                <li class="navbar__sub-item">
+                  <img src="./images/icon-reminders.svg" alt="" />Reminders
+                </li>
+                <li class="navbar__sub-item">
+                  <img src="./images/icon-planning.svg" alt="" />Planning
+                </li>
+              </ul>
+            </li>
+            <li class="navbar__item">
+              <span class="navbar__item-with-button">
+                Company
+                <button class="navbar__open-sub-menu">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                    data-up="1"
+                    class="navbar__open-sub-menu-img"
+                  />
+                </button>
+              </span>
+              <ul class="navbar__sub-item-list navbar__sub-item-list--hide">
+                <li class="navbar__sub-item">History</li>
+                <li class="navbar__sub-item">Our Team</li>
+                <li class="navbar__sub-item">Blog</li>
+              </ul>
+            </li>
+            <li class="navbar__item">Carrers</li>
+            <li class="navbar__item">About</li>
+          </ul>
+        </div>
+      </section>
+    </nav>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
