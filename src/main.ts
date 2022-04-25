@@ -8,10 +8,9 @@ const closeMenuButton = document.querySelector<HTMLButtonElement>(
   '.navbar__close-menu'
 );
 
-const dropdownClasses: string[] = [
-  'navbar__open-sub-menu',
-  'navbar__open-sub-menu-img',
-];
+const dropdownClasses: string[] = ['navbar__item-with-button'];
+
+document.documentElement.addEventListener('click', () => {});
 
 closeMenuButton?.addEventListener('click', toggleHideMenu);
 
@@ -23,11 +22,9 @@ navItemsList?.addEventListener('click', (e) => {
   const isButton = dropdownClasses.includes(element.classList[0]);
 
   if (isButton) {
-    const subMenuList = element.parentElement?.parentElement?.querySelector(
-      '.navbar__sub-item-list'
-    );
-    const imageDropdown = element.firstElementChild as HTMLImageElement;
-
+    const subMenuList = element.nextElementSibling;
+    const imageDropdown = element.firstElementChild
+      ?.firstElementChild as HTMLImageElement;
     if (imageDropdown.dataset.up === '0') {
       imageDropdown.dataset.up = '1';
       imageDropdown.src = './images/icon-arrow-up.svg';
