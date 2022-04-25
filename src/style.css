@@ -20,12 +20,22 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 20px;
-  padding: 1rem;
+  padding: 1.5rem;
+  border: 1px solid black;
 }
 
 .navbar__logo {
   height: 20px;
+}
+
+.navbar__buttons {
+  display: none;
+}
+
+.navbar__menu-button {
+  cursor: pointer;
 }
 
 .navbar__menu-button > input {
@@ -127,7 +137,53 @@ body {
   pointer-events: none;
 }
 
+.navbar__item {
+  cursor: pointer;
+}
+.navbar__item > span:hover {
+  text-shadow: 0 0 1px black;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-radius: 0.7rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  text-shadow: 0px 0px 1px var(--almost-black);
+  /* outline: 1px solid var(--almost-black); */
+  /* border: 0.3px solid var(--almost-black); */
+}
+
+.btn--ghost {
+  outline: 1px solid var(--almost-black);
+}
+
+.btn--ghost:hover {
+  outline: 2px solid var(--almost-black);
+}
+
 @media screen and (min-width: 769px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  .navbar__buttons {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .navbar__links {
+    flex: 1;
+  }
+
   .overlay {
     background-color: transparent;
     height: auto;
@@ -145,21 +201,22 @@ body {
 
   .navbar__item-list {
     position: relative;
-    right: 0;
-    width: auto;
+    /* right: 0; */
+    /* width: auto; */
     height: auto;
     padding: initial;
     z-index: 1;
     background-color: transparent;
-    display: flex;
     flex-direction: row;
     font-size: 0.9em;
     gap: 3rem;
-    align-items: center;
+    align-items: baseline;
   }
 
   .navbar__item {
     position: relative;
+    padding: 0;
+    margin: 0;
   }
 
   .navbar__sub-item-list {
@@ -170,6 +227,8 @@ body {
     box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.5);
     padding: 0 1rem 1rem 1rem;
     border-radius: 0.5rem;
+    /* width: 9rem; */
+    white-space: nowrap;
   }
 
   .navbar__sub-item-list--left {
@@ -178,5 +237,9 @@ body {
 
   .navbar__menu-button {
     display: none;
+  }
+
+  .navbar__open-sub-menu-img {
+    max-width: initial;
   }
 }

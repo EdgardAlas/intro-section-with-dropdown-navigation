@@ -16,7 +16,15 @@ closeMenuButton?.addEventListener('click', toggleHideMenu);
 
 menuButton?.addEventListener('change', toggleHideMenu);
 
-navItemsList?.addEventListener('click', (e) => {
+navItemsList?.addEventListener('click', openDropdown);
+
+overlay?.addEventListener('click', toggleHideMenu);
+
+function toggleHideMenu() {
+  overlay?.classList.toggle('overlay--show');
+}
+
+function openDropdown(e: Event) {
   e.stopPropagation();
   const element = e.target as Element;
   const isButton = dropdownClasses.includes(element.classList[0]);
@@ -35,10 +43,4 @@ navItemsList?.addEventListener('click', (e) => {
 
     subMenuList?.classList.toggle('navbar__sub-item-list--hide');
   }
-});
-
-overlay?.addEventListener('click', toggleHideMenu);
-
-function toggleHideMenu() {
-  overlay?.classList.toggle('overlay--show');
 }
