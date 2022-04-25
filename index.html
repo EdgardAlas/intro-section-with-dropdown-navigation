@@ -14,7 +14,7 @@
           <img src="./images/icon-menu.svg" alt="menu" />
           <input type="checkbox" id="menu-button" />
         </label>
-        <div class="overlay">
+        <div class="overlay overlay--show">
           <ul class="navbar__item-list">
             <li class="navbar__item navbar__item--right">
               <span class="navbar__close-menu">
@@ -74,11 +74,34 @@
         </div>
       </section>
       <section class="navbar__buttons">
-        <button class="btn">Login</button>
-        <button class="btn btn--ghost">Register</button>
+        <a href="#" class="btn">Login</a>
+        <a href="#" class="btn btn--ghost">Register</a>
       </section>
     </nav>
-
+    <main class="main-container">
+      <section class="main-container__principal-image"></section>
+      <section class="main-container__description">
+        <h1 class="main-container__descriptio-title">
+          Make <br class="show-break" />remote work
+        </h1>
+        <section class="main-container__description--text">
+          <p>Get your team in sync, no matter your location.</p>
+          <p>
+            Streamline processes, create team rituals, and watch productivity
+            soar.
+          </p>
+        </section>
+        <section>
+          <a href="#" class="btn btn--big">Learn more</a>
+        </section>
+      </section>
+      <section class="main-container__images">
+        <img src="./images/client-databiz.svg" alt="databiz" />
+        <img src="./images/client-audiophile.svg" alt="audio phile" />
+        <img src="./images/client-meet.svg" alt="meet" />
+        <img src="./images/client-maker.svg" alt="maker" />
+      </section>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
