@@ -1,5 +1,9 @@
 import 'minireset.css';
 import './style.css';
+import arrowUp from '../images/icon-arrow-up.svg';
+import arrowDown from '../images/icon-arrow-down.svg';
+
+console.log(arrowUp, arrowDown);
 
 const navItemsList = document.querySelector('.navbar__item-list');
 const menuButton = document.querySelector<HTMLInputElement>('#menu-button');
@@ -35,14 +39,10 @@ function openDropdown(e: Event) {
       ?.firstElementChild as HTMLImageElement;
     if (imageDropdown.dataset.up === '0') {
       imageDropdown.dataset.up = '1';
-      imageDropdown.src = `/${
-        location.hostname.includes('localhost') ? 'images' : 'assets'
-      }/icon-arrow-up.svg`;
+      imageDropdown.src = arrowUp;
     } else {
       imageDropdown.dataset.up = '0';
-      imageDropdown.src = `/${
-        location.hostname.includes('localhost') ? 'images' : 'assets'
-      }/icon-arrow-down.svg`;
+      imageDropdown.src = arrowDown;
     }
 
     subMenuList?.classList.toggle('navbar__sub-item-list--hide');
