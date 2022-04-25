@@ -35,10 +35,14 @@ function openDropdown(e: Event) {
       ?.firstElementChild as HTMLImageElement;
     if (imageDropdown.dataset.up === '0') {
       imageDropdown.dataset.up = '1';
-      imageDropdown.src = './images/icon-arrow-up.svg';
+      imageDropdown.src = `/${
+        location.hostname.includes('localhost') ? 'images' : 'assets'
+      }/icon-arrow-up.svg`;
     } else {
       imageDropdown.dataset.up = '0';
-      imageDropdown.src = './images/icon-arrow-down.svg';
+      imageDropdown.src = `/${
+        location.hostname.includes('localhost') ? 'images' : 'assets'
+      }/icon-arrow-down.svg`;
     }
 
     subMenuList?.classList.toggle('navbar__sub-item-list--hide');
